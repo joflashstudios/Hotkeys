@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61EB58C9-5B2C-4F00-8BCC-20133E0A8B13}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrayOpen</RootNamespace>
+    <AssemblyName>TrayOpen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioXP\PCWin32.cs" />
+    <Compile Include="AudioXP\VolumeConstants.cs" />
+    <Compile Include="AudioXP\VolumeControl.cs" />
+    <Compile Include="AudioXP\VolumeStructs.cs" />
+    <Compile Include="Audio\AUDCLNT_RETURNFLAGS.cs" />
+    <Compile Include="Audio\AUDCLNT_SESSIONFLAGS.cs" />
+    <Compile Include="Audio\AUDCLNT_SHAREMODE.cs" />
+    <Compile Include="Audio\AUDCLNT_STREAMFLAGS.cs" />
+    <Compile Include="Audio\AudioEndpointVolume.cs" />
+    <Compile Include="Audio\AudioEndpointVolumeCallback.cs" />
+    <Compile Include="Audio\AudioEndpointVolumeChannel.cs" />
+    <Compile Include="Audio\AudioEndpointVolumeChannels.cs" />
+    <Compile Include="Audio\AudioEndpointVolumeNotificationDelegate.cs" />
+    <Compile Include="Audio\AudioEndpointVolumeStepInformation.cs" />
+    <Compile Include="Audio\AudioEndPointVolumeVolumeRange.cs" />
+    <Compile Include="Audio\AudioLoudness.cs" />
+    <Compile Include="Audio\AudioMeterInformation.cs" />
+    <Compile Include="Audio\AudioMeterInformationChannels.cs" />
+    <Compile Include="Audio\AudioMute.cs" />
+    <Compile Include="Audio\AudioPeakMeter.cs" />
+    <Compile Include="Audio\AudioSessionControl.cs" />
+    <Compile Include="Audio\AudioSessionControl2.cs" />
+    <Compile Include="Audio\AudioSessionDisconnectReason.cs" />
+    <Compile Include="Audio\AudioSessionEvents.cs" />
+    <Compile Include="Audio\AudioSessionManager.cs" />
+    <Compile Include="Audio\AudioSessionManager2.cs" />
+    <Compile Include="Audio\AudioSessionNotification.cs" />
+    <Compile Include="Audio\AudioSessionState.cs" />
+    <Compile Include="Audio\AudioVolumeLevel.cs" />
+    <Compile Include="Audio\AudioVolumeNotificationData.cs" />
+    <Compile Include="Audio\AUDIO_VOLUME_NOTIFICATION_DATA.cs" />
+    <Compile Include="Audio\Blob.cs" />
+    <Compile Include="Audio\CLSCTX.cs" />
+    <Compile Include="Audio\Connector.cs" />
+    <Compile Include="Audio\ConnectorType.cs" />
+    <Compile Include="Audio\ControlChangeNotify.cs" />
+    <Compile Include="Audio\ControlInterface.cs" />
+    <Compile Include="Audio\CPolicyConfigClient.cs" />
+    <Compile Include="Audio\CPolicyConfigVistaClient.cs" />
+    <Compile Include="Audio\DeviceTopology.cs" />
+    <Compile Include="Audio\DEVICE_STATE.cs" />
+    <Compile Include="Audio\EDataFlow.cs" />
+    <Compile Include="Audio\EEndpointHardwareSupport.cs" />
+    <Compile Include="Audio\ENDPOINT_HARDWARE_SUPPORT.cs" />
+    <Compile Include="Audio\ERole.cs" />
+    <Compile Include="Audio\eStgmAccess.cs" />
+    <Compile Include="Audio\IAudioCaptureClient.cs" />
+    <Compile Include="Audio\IAudioClient.cs" />
+    <Compile Include="Audio\IAudioEndpointVolume.cs" />
+    <Compile Include="Audio\IAudioEndpointVolumeCallback.cs" />
+    <Compile Include="Audio\IAudioLoudness.cs" />
+    <Compile Include="Audio\IAudioMeterInformation.cs" />
+    <Compile Include="Audio\IAudioMute.cs" />
+    <Compile Include="Audio\IAudioPeakMeter.cs" />
+    <Compile Include="Audio\IAudioSessionControl.cs" />
+    <Compile Include="Audio\IAudioSessionControl2.cs" />
+    <Compile Include="Audio\IAudioSessionEnumerator.cs" />
+    <Compile Include="Audio\IAudioSessionEvents.cs" />
+    <Compile Include="Audio\IAudioSessionManager.cs" />
+    <Compile Include="Audio\IAudioSessionManager2.cs" />
+    <Compile Include="Audio\IAudioSessionNotification.cs" />
+    <Compile Include="Audio\IAudioVolumeLevel.cs" />
+    <Compile Include="Audio\IConnector.cs" />
+    <Compile Include="Audio\IControlChangeNotify.cs" />
+    <Compile Include="Audio\IControlInterface.cs" />
+    <Compile Include="Audio\IDeviceTopology.cs" />
+    <Compile Include="Audio\IMMDevice.cs" />
+    <Compile Include="Audio\IMMDeviceCollection.cs" />
+    <Compile Include="Audio\IMMDeviceEnumerator.cs" />
+    <Compile Include="Audio\IMMEndpoint.cs" />
+    <Compile Include="Audio\IMMNotificationClient.cs" />
+    <Compile Include="Audio\IPart.cs" />
+    <Compile Include="Audio\IPartsList.cs" />
+    <Compile Include="Audio\IPerChannelDbLevel.cs" />
+    <Compile Include="Audio\IPolicyConfig.cs" />
+    <Compile Include="Audio\IPolicyConfigVista.cs" />
+    <Compile Include="Audio\IPropertyStore.cs" />
+    <Compile Include="Audio\ISimpleAudioVolume.cs" />
+    <Compile Include="Audio\ISubunit.cs" />
+    <Compile Include="Audio\KSNODETYPE.cs" />
+    <Compile Include="Audio\MMDevice.cs" />
+    <Compile Include="Audio\MMDeviceCollection.cs" />
+    <Compile Include="Audio\MMDeviceEnumerator.cs" />
+    <Compile Include="Audio\Part.cs" />
+    <Compile Include="Audio\PartsList.cs" />
+    <Compile Include="Audio\PartType.cs" />
+    <Compile Include="Audio\PerChannelDbLevel.cs" />
+    <Compile Include="Audio\PKEY.cs" />
+    <Compile Include="Audio\PROPERTYKEY.cs" />
+    <Compile Include="Audio\PropertyStore.cs" />
+    <Compile Include="Audio\PropertyStoreProperty.cs" />
+    <Compile Include="Audio\PropVariant.cs" />
+    <Compile Include="Audio\REFIID.cs" />
+    <Compile Include="Audio\SessionCollection.cs" />
+    <Compile Include="Audio\SimpleAudioVolume.cs" />
+    <Compile Include="Audio\Subunit.cs" />
+    <Compile Include="Audio\WAVEFORMATEX.cs" />
+    <Compile Include="Audio\_AUDCLNT_BUFFERFLAGS.cs" />
+    <Compile Include="Hotkey.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Volume.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
