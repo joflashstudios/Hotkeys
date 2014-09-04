@@ -28,7 +28,6 @@ namespace TrayOpen
         static Hotkey OpenKey = new Hotkey(Keys.O, false, false, false, true);
         static Hotkey BlackKey = new Hotkey(Keys.Q, false, false, false, true);
         static Hotkey SleepKey = new Hotkey(Keys.S, false, false, false, true);
-        static Hotkey BedKey = new Hotkey(Keys.N, false, false, false, true);
         static Hotkey HibernateKey = new Hotkey(Keys.H, false, false, false, true);
         static Hotkey VolumeDownKey = new Hotkey(Keys.OemOpenBrackets, false, false, false, true);
         static Hotkey VolumeUpKey = new Hotkey(Keys.OemCloseBrackets, false, false, false, true);
@@ -56,6 +55,7 @@ namespace TrayOpen
             Icon.ContextMenuStrip = Menu;
             Icon.Visible = true;
             Icon.MouseDoubleClick += new MouseEventHandler(Icon_MouseDoubleClick);
+
             VolumeUpKey.Register(new Form());
             VolumeDownKey.Register(new Form());
 
@@ -70,7 +70,6 @@ namespace TrayOpen
             HibernateKey.Pressed += new System.ComponentModel.HandledEventHandler(Key_Pressed);
             SleepKey.Register(new Form());                     
             SleepKey.Pressed += new System.ComponentModel.HandledEventHandler(Key_Pressed);
-            BedKey.Register(new Form());
             ManagementEventWatcher EventWatcher = new ManagementEventWatcher();
             
             WqlEventQuery q;
@@ -206,7 +205,6 @@ namespace TrayOpen
             BlackKey.Unregister();
             HibernateKey.Unregister();
             SleepKey.Unregister();
-            BedKey.Unregister();
             VolumeDownKey.Unregister();
             VolumeUpKey.Unregister();
             Refreash();
